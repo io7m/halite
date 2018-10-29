@@ -238,7 +238,7 @@ ch\.qos\.logback:logback-classic:jar:.*
 
 Will result in only artifacts of type `jar`, with a group
 `ch.qos.logback` artifact `logback-classic`, and of any version,
-will be copied. Filter files are evaluated from top to bottom, and
+being copied. Filter files are evaluated from top to bottom, and
 the first pattern that matches will halt evaluation and cause the
 artifact being tested to be included into the set of artifacts that
 will be copied. The `halite.inclusionListFile` parameter specifies
