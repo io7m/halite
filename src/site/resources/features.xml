@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml">
   <ul>
-    <li>Maven plugin to collect the artifacts and transitive dependencies of an arbitrary project.</i>
+    <li>Maven plugin to collect the artifacts and transitive dependencies of an arbitrary project.</li>
     <li>ISC license.</li>
   </ul>
 </div>
