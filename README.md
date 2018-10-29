@@ -16,7 +16,7 @@ Due to limitations in Maven, the `crystallize` goal MUST be executed after
 the Maven `package` phase, in the same execution:
 
 ```
-$ mvn package com.io7m.halite.maven.plugin:0.0.1:crystallize
+$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:0.0.1:crystallize
 ```
 
 The `crystallize` goal copies all of the compile and runtime dependencies
@@ -24,7 +24,7 @@ and artifacts of the current project to a specified directory. The `outputDirect
 parameter specifies the output directory:
 
 ```
-$ mvn package com.io7m.halite.maven.plugin:0.0.1:crystallize \
+$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:0.0.1:crystallize \
   -Dhalite.outputDirectory=/tmp/crystallized
 ...
 [INFO] --- com.io7m.halite.maven.plugin:0.0.1:crystallize (default-cli) @ com.io7m.jregions ---
@@ -264,7 +264,7 @@ $ cat exclusion.txt
 # Do not copy documentation
 com\.io7m\.jregions:com\.io7m\.jregions\.documentation:.*
 
-$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:crystallize \
+$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:0.0.1:crystallize \
   -Dhalite.outputDirectory=/tmp/crystallized \
   -Dhalite.inclusionListFile=inclusion.txt \
   -Dhalite.exclusionListFile=exclusion.txt
@@ -295,7 +295,7 @@ only want to know what will be copied but want some other system to handle the
 actual copying. Using the example above:
 
 ```
-$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:crystallize \
+$ mvn package com.io7m.halite:com.io7m.halite.maven.plugin:0.0.1:crystallize \
   -Dhalite.outputDirectory=/tmp/crystallized \
   -Dhalite.inclusionListFile=inclusion.txt \
   -Dhalite.exclusionListFile=exclusion.txt \
