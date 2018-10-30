@@ -228,7 +228,7 @@ be tested. A _filter file_ is a file containing one [java.util.Pattern](https://
 
 More formally, if `C` is the set of artifacts that will be copied by the plugin,
 `I` is the set of artifacts to be _included_, and `X` is the set of artifacts
-to be _exluded_ then, for any given artifact `a`, `a ∈ C iff a ∈ I ∧ a ∉ X`.
+to be _excluded_ then, for any given artifact `a`, `a ∈ C iff a ∈ I ∧ a ∉ X`.
 
 For example, an _inclusion_ filter file containing the following:
 
