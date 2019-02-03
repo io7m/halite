@@ -9,7 +9,7 @@
   <parent>
     <groupId>com.io7m.primogenitor</groupId>
     <artifactId>com.io7m.primogenitor</artifactId>
-    <version>3.0.0-beta0014</version>
+    <version>3.0.0-beta0019</version>
   </parent>
 
   <groupId>com.io7m.halite</groupId>
@@ -169,28 +169,21 @@
   <build>
     <pluginManagement>
       <plugins>
-        <!-- Require JDK >= 10 -->
+        <!-- Require JDK >= 11 -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
-            <source>10</source>
-            <target>10</target>
-            <release>10</release>
+            <source>11</source>
+            <target>11</target>
+            <release>11</release>
           </configuration>
         </plugin>
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.5.2</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>7.0</version>
-            </dependency>
-          </dependencies>
+          <version>3.6.0</version>
         </plugin>
 
         <plugin>
