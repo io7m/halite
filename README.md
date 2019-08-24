@@ -3,6 +3,7 @@ halite
 
 [![Travis](https://img.shields.io/travis/io7m/halite.png?style=flat-square)](https://travis-ci.org/io7m/halite)
 [![Maven Central](https://img.shields.io/maven-central/v/com.io7m.halite/com.io7m.halite.png?style=flat-square)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.halite%22)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.io7m.halite/com.io7m.halite.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/com/io7m/halite/)
 [![Codacy grade](https://img.shields.io/codacy/grade/e3b8f8b160e54798aa1f5aed8a460a99.png?style=flat-square)](https://www.codacy.com/app/github_79/halite)
 [![Codecov](https://img.shields.io/codecov/c/github/io7m/halite.png?style=flat-square)](https://codecov.io/gh/io7m/halite)
 
