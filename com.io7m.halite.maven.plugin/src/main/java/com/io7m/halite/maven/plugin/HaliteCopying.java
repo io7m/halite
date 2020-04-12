@@ -94,42 +94,62 @@ public final class HaliteCopying
         output_path.resolve(artifact.getGroupId())
           .toAbsolutePath();
 
-      try {
-        log.info("mkdir " + group_path);
-
-        if (!dry_run) {
-          Files.createDirectories(group_path);
-        }
-      } catch (final Exception e) {
-        exception = accumulateException(exception, e);
-      }
-
-      final File file = artifact.getFile();
-      if (file == null) {
-        log.info("artifact " + artifact.getId() + " has no file");
-        continue;
-      }
-
-      final Path input_path = file.toPath().toAbsolutePath();
-      final String input_name = file.getName();
-      final Path output_file = group_path.resolve(input_name).toAbsolutePath();
-      final Path output_tmp = group_path.resolve(input_name + ".tmp").toAbsolutePath();
-
-      try {
-        log.info("copy " + input_path + " " + output_tmp);
-        log.info("rename " + output_tmp + " " + output_file);
-
-        if (!dry_run) {
-          Files.copy(input_path, output_tmp, REPLACE_EXISTING);
-          Files.move(output_tmp, output_file, ATOMIC_MOVE, REPLACE_EXISTING);
-        }
-      } catch (final Exception e) {
-        exception = accumulateException(exception, e);
-      }
+      exception = createDirectory(log, dry_run, exception, group_path);
+      exception = copyFile(log, dry_run, exception, artifact, group_path);
     }
 
     if (exception != null) {
       throw exceptions.apply(exception.getMessage(), exception);
     }
+  }
+
+  private static Exception copyFile(
+    final Log log,
+    final boolean dryRun,
+    final Exception exception,
+    final Artifact artifact,
+    final Path groupPath)
+  {
+    final File file = artifact.getFile();
+    if (file == null) {
+      log.info("artifact " + artifact.getId() + " has no file");
+      return exception;
+    }
+
+    final Path input_path = file.toPath().toAbsolutePath();
+    final String input_name = file.getName();
+    final Path output_file = groupPath.resolve(input_name).toAbsolutePath();
+    final Path output_tmp = groupPath.resolve(input_name + ".tmp").toAbsolutePath();
+
+    try {
+      log.info("copy " + input_path + " " + output_tmp);
+      log.info("rename " + output_tmp + " " + output_file);
+
+      if (!dryRun) {
+        Files.copy(input_path, output_tmp, REPLACE_EXISTING);
+        Files.move(output_tmp, output_file, ATOMIC_MOVE, REPLACE_EXISTING);
+      }
+    } catch (final Exception e) {
+      return accumulateException(exception, e);
+    }
+    return exception;
+  }
+
+  private static Exception createDirectory(
+    final Log log,
+    final boolean dryRun,
+    final Exception exception,
+    final Path groupPath)
+  {
+    try {
+      log.info("mkdir " + groupPath);
+
+      if (!dryRun) {
+        Files.createDirectories(groupPath);
+      }
+    } catch (final Exception e) {
+      return accumulateException(exception, e);
+    }
+    return exception;
   }
 }

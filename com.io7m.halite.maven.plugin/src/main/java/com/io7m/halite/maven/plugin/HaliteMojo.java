@@ -120,7 +120,7 @@ public final class HaliteMojo extends AbstractMojo
    */
 
   @Parameter(required = false, property = "halite.dryRun")
-  private boolean dryRun = false;
+  private boolean dryRun;
 
   @Component
   private DependencyGraphBuilder dependencyGraphBuilder;
