@@ -8,10 +8,6 @@
          <img src="https://img.shields.io/maven-central/v/com.io7m.halite/com.io7m.halite.png?style=flat-square"
               alt="Maven Central"/>
       </a>
-      <a href="https://www.codacy.com/app/github_79/halite">
-         <img src="https://img.shields.io/codacy/grade/e3b8f8b160e54798aa1f5aed8a460a99.png?style=flat-square"
-              alt="Codacy"/>
-      </a>
       <a href="https://codecov.io/gh/io7m/halite">
          <img src="https://img.shields.io/codecov/c/github/io7m/halite.png?style=flat-square"
               alt="Codecov"/>
@@ -23,5 +19,5 @@
     the artifacts and dependencies of arbitrary Maven projects into a single
     directory.
   </p>
-  
+
 </div>
