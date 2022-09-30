@@ -2,7 +2,7 @@ halite
 ===
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.io7m.halite/com.io7m.halite.svg?style=flat-square)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.halite%22)
-[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.io7m.halite/com.io7m.halite.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/com/io7m/halite/)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/s01.oss.sonatype.org/com.io7m.halite/com.io7m.halite.svg?style=flat-square)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/io7m/halite/)
 [![Codecov](https://img.shields.io/codecov/c/github/io7m/halite.svg?style=flat-square)](https://codecov.io/gh/io7m/halite)
 
 ![halite](./src/site/resources/halite.jpg?raw=true)
