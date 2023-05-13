@@ -30,7 +30,7 @@
 
   <properties>
     <io7m.api.previousVersion>0.0.1</io7m.api.previousVersion>
-    <io7m.maven-api.version>3.9.1</io7m.maven-api.version>
+    <io7m.maven-api.version>3.9.2</io7m.maven-api.version>
     <mdep.analyze.skip>true</mdep.analyze.skip>
   </properties>
 
